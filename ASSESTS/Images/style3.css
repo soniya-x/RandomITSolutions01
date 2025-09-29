@@ -1,0 +1,1146 @@
+/* ================== GLOBAL STYLES ================== */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================== GLOBAL OVERLAY (All sections) ================== */
+/* body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(237, 234, 234, 0.4) 0px,
+      rgba(248, 246, 246, 0.4) 20px,
+      rgba(202, 221, 234, 0.25) 20px,
+      rgba(183, 211, 229, 0.25) 80px
+    ),
+    rgba(244, 241, 241, 0.1); /* light tint 
+  z-index: -2;
+  pointer-events: none;
+} */
+
+/* ================== HERO SECTION (with extra left & right) ================== */
+/* .main {
+  position: relative;
+  background: url("Assests/hero.png.png") center/cover no-repeat;
+  min-height: 100vh;
+
+  z-index: 0;
+} */
+
+/* .main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: */
+    /* Left thick stripe */
+    /* linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.5) 0px,
+      rgba(0, 0, 0, 0.5) 40px,
+      transparent 40px
+    ), */
+
+    /* Right thick stripe */
+    /* linear-gradient(
+      90deg,
+      transparent calc(100% - 40px),
+      rgba(0, 0, 0, 0.5) calc(100% - 40px),
+      rgba(0, 0, 0, 0.5) 100%
+    ), */
+
+    /* Middle repeating stripes */
+    /* repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.4) 0px,
+      rgba(0, 0, 0, 0.4) 20px,
+      rgba(8, 43, 67, 0.25) 20px,
+      rgba(21, 51, 71, 0.25) 80px
+    ); */
+
+  /* z-index: 1;
+  pointer-events: none;
+} */
+
+/* .hero,
+.services {
+  position: relative;
+  z-index: 2; /* keep content above overlays 
+  color: white;
+} */
+
+
+
+.main {
+  position: relative;
+  background: url("/Assests/hero.png.png") center/cover no-repeat;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* simple dark overlay */
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+.main {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+}
+
+.hero-content {
+  color: #fff;
+  max-width: 800px;
+}
+
+.hero-content h1,
+.hero-content p {
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-content.fade-out h1,
+.hero-content.fade-out p {
+  opacity: 0;
+}
+
+/* Services boxes animation */
+.services .box {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.services .box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.hero,
+.services {
+  position: relative;
+  z-index: 2; /* content stays above overlay */
+  color: white;
+}
+
+/* ================== HEADER ================== */
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border: 1px solid rgb(236, 229, 229);
+}
+
+.navbar {
+  display: flex;
+  gap: 70px;
+  position: sticky;
+
+}
+
+.logo img {
+  position: absolute;
+  padding-left: 30px;
+  top: 29px;
+  width: 36px;
+  height: 35px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 26px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.nav-links li a.active {
+  color: crimson;
+}
+
+.btn-contact {
+  position: absolute;
+  right: 80px;
+  background: crimson;
+  padding: 10px 25px;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ================== HERO CONTENT ================== */
+#hero_span {
+  font-family: Lateef;
+  font-weight: 400;
+  padding-top: 100px;
+  font-size: 170px;
+  line-height: 90%;
+  letter-spacing: 8px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+
+.main {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+}
+
+.hero-content {
+  color: #fff;
+  max-width: 800px;
+}
+
+.hero-content h1,
+.hero-content p {
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-content.fade-out h1,
+.hero-content.fade-out p {
+  opacity: 0;
+}
+
+/* Services boxes animation */
+.services .box {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.services .box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+ .btn {
+  padding: 8px  30px 8px 3px ;
+  border: 1px solid white;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+   text-align: left; 
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+/* ================== SERVICES SECTION ================== */
+.services {
+  margin-top: 90px;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  border-radius: 5px;
+  color: #fff;
+  gap: 15px;
+}
+
+.container h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.Rectangle {
+  padding: 20px;
+  width: 200px;
+  color: #fff;
+  border-left: 2px solid rgb(232, 225, 226);
+}
+
+.Rectangle h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ================== TECH SECTION ================== */
+.tech {
+  position: relative;
+  display: flex;
+  padding-left: 50px;;
+  border-bottom: 2px solid rgb(188, 63, 82);
+  gap:90px;
+  justify-content: space-around; 
+  text-align: center;
+}
+
+/* #tech-span {
+  color: red;
+  letter-spacing: 0%;
+  font-size: 30px;
+  font-family: Be Vietnam Pro;
+  font-weight: 600;
+  font-style: SemiBold;
+  
+  
+} */
+
+#tech-span {
+  left: 90px;
+  position: absolute;
+  color: crimson;
+  font-size: 30px;
+  font-weight: 700;
+
+}
+
+
+.tech p {
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 20px;
+  /* padding-left: 20px;; */
+}
+  .tech-slider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+.tech-partners {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.tech-partners img {
+  width: 150px;       /* fixed width */
+  height: 50px;       /* fixed height */
+  object-fit: contain; /* keeps logo aspect ratio */
+  background: #fff;    /* optional: white background */
+  border: 1px solid #191919;
+  border-radius: 1px;  /* smooth corners */
+  padding: 8px;        /* space inside box */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-partners img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+  .arrow {
+      border: none;
+      background: #f9f5f5;
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+
+
+.fa-angle-left{
+
+  
+  color: black;
+  background: #f9f5f5;
+  padding-bottom:5px; 
+  height: 30px;
+  width: 25px;
+  margin: 5px 50px 3px 10px ;
+ 
+}
+.fa-angle-right{
+  color: rgb(0, 0, 0);
+  background: #f9f5f5;
+  padding-bottom:5px; 
+  height: 30px;
+  width: 25px;
+  margin: 2px 0px 4px 15px ;
+
+}
+
+
+                     /* ===== WHY CHOOSE US SECTION ===== */
+.why-choose {
+  width: 100%;
+  padding: 60px 80px;
+  background: transparent; /* 
+  stripes visible from body::before */
+  z-index: 1;
+}
+
+.why-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px; 
+}
+
+/* Left Image */
+.why-image {
+  flex: 0 0 250px; /* image का size fix कर दिया */
+}
+.why-image img {
+  width: 100%;
+  height: auto; /* proportion maintain रहेगा */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Right Content */
+.why-content {
+  width: 650px;           
+  max-width: 90%;         
+  min-height: 400px;      
+  padding: 10px 10px 10px 20px; /* top padding कम (पहले बड़ा था) */
+  box-sizing: border-box; 
+  color: #222;
+}
+
+.why-content h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.why-content h3 span {
+  color: crimson; 
+  margin-right: 10px;
+}
+
+.why-content h3::after {
+  content: "";
+  position: absolute;
+  left: 160px;
+  bottom: 3px;
+  width: 500px;
+  height: 2px;
+  background: crimson;
+}
+
+.why-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Button */
+.btn-para{
+  display: inline-block;
+  padding-right: 50px;
+  padding-left: 3px;
+  color: #ad1111;
+  cursor: pointer;   /* दिखे कि क्लिक कर सकते हो */
+  text-align: center;
+  user-select: none;
+  border: 1px solid black;
+}
+
+.btn-para:hover {
+  background: crimson;
+}
+ 
+
+            /* ================== SERVICE SECTION ================== */
+ .services-section {
+  margin-top: 60px;
+  position: relative;
+ 
+  background: #e9e3e3;
+  width: 90%;
+  height: auto;
+  border: 1px solid #ddd;
+ 
+}
+
+/* Layout */
+.services-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  
+}
+
+/* ================= LEFT CARD ================= */
+.service-card-left {
+  position: relative;       /* parent ko relative banaya */
+  width: 80%;
+  height: 500px;            /* fix height ya apki requirement ke hisaab se */
+  overflow: hidden;         /* overlay ko image ke bahar jane se rokta hai */
+}
+
+.service-card-left img {
+  width: 100%;              /* container ke width ke barabar */
+  height: 100%;             /* container ke height ke barabar */
+  object-fit: cover;        /* image crop ho ke fit hogi */
+  display: block;
+}
+
+.overlay-left {
+  position: absolute;       /* parent ke andar chipka diya */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  background: rgba(8, 4, 60, 0.803); /* blue overlay */
+}
+
+
+
+
+/* Button in left card */
+.para1 {
+  display: inline-flex;
+  align-items: center;
+  gap: 50px;
+  width: 250px;
+  height: 30px;
+  padding: 8px 15px;
+  color: black;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+
+.p-primary {
+  color: #fff;
+  font-weight: bold;
+}
+
+.fa-arrow-right{
+  color: rgb(0, 0, 0);
+  background: #f9f5f5;
+ 
+  height: 20px;
+  width: 30px;
+ padding: 7px 10px 7px 10px;
+ margin-right: 7px;
+ border-radius: 7px;
+ border: 1px solid rgb(255, 255, 255);
+ 
+
+}
+
+/* ================= RIGHT CARDS ================= */
+.services-cards {
+  display: flex;
+}
+
+.service-card-right {
+  position: relative;
+  border-radius: 8px;
+  padding-top: 40px;
+  padding-right:40px;
+  width: 30%;
+  height: 70%; 
+  
+  padding-bottom: 40px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.service-card-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay-right {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30px;   /* 0 ke jagah 30px diya, thoda upar aayega */
+  padding: 20px;
+  color: #fff;
+}
+
+
+.overlay-right h3 {
+  top:100px;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.overlay-right p {
+  font-size: 0.95rem;
+  width: 280px;
+  line-height: 1.5;
+}
+
+
+.rectangle-indicators {
+  position: absolute;
+  bottom: 70px;
+  width: 40px;   /* ek rectangle ka size */
+  height: 8px;
+  background: red;  /* Active rectangle */
+  border-radius: 4px;  /* Rounded corners */
+  box-shadow: 
+    50px 0 0 #333,   /* 2nd rectangle */
+    100px 0 0 #333,  /* 3rd rectangle */
+    150px 0 0 #333;  /* 4th rectangle */
+}
+
+
+/* Project container */
+.projects-section {
+  padding: 5px 80px;
+  background: #fff;
+}
+
+.projects-container {
+  text-align: center;
+}
+
+.projects-container h2 {
+  font-size: 2rem;
+  color: #000;
+  font-weight: bold;
+  text-align: left;
+}
+
+.red {
+  color: red;
+}
+
+.heading-line {
+  width: 100%;
+  height: 2px;
+  background: purple;
+  margin: 8px 0 30px;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  padding: 5px;
+  background: #fff;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Button */
+.btn-wrapper {
+  text-align: center;
+}
+
+.view-btn {
+  padding: 10px 20px;
+  border: 1px solid black;
+  background: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-btn:hover {
+  background: black;
+  color: white;
+}
+/* ================== NEWS SECTION ================== */
+
+.latest-news {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.latest-news h2 {
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.latest-news h2::after {
+  content: '';
+  position: absolute;
+  width: 900px;
+  height: 2px;
+  background-color: #e53935;
+  top:25px;
+  left: 10;
+}
+
+/* news section */
+
+.news-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  position: relative;
+  
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-info {
+  position: relative;
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-date {
+  top: -12px;
+  left: 60px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgb(12, 12, 12);
+  font-size: 12px;
+  background:white;
+  color: #090909;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px 20px;
+}
+
+.card-date img {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid beige;
+
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 0 10 0 0;
+  color: #000;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+  flex-grow: 1;
+}
+
+
+
+.card button {
+  margin-top: 10px;
+  padding: 10px 0; 
+  width: 200px;   
+  text-align: left; 
+  padding-left: 10px; /* thoda space border aur text ke beech */
+  font-size: 14px;
+  border: 1px solid #333;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+
+
+/* ================== REVIEW SECTION ================== */
+
+.testimonials {
+  position: relative;
+  background: #111; /* black background */
+  color: #fff;
+  height: 55vh;
+  padding: 20px 80px;
+
+}
+
+.testimonials h2 {
+  font-size: 28px;
+  position: relative;
+  margin-bottom: 40px;
+}
+  .testimonials h2::after {
+  content: '';
+  position: absolute;
+  width: 900px;
+  height: 2px;
+  background-color:white ;
+  bottom: 4px;;
+  
+}
+
+.testimonial-cards {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+.testimonial-card {
+  background: #2a2a2a;
+  padding: 20px;
+  width: 350px;
+  height: 160px;
+  border-radius: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.testimonial-card .stars {
+  color: gold;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.testimonial-card p {
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 10px;   /* gap between image and text */
+  margin-top: auto;  /* pushes author to bottom of card */
+}
+
+.author-info {
+  display: flex;
+  flex-direction: row; /* name above profession */
+  gap:120px;               /* space between name & profession */
+}
+
+.author-info h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.author-info span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+
+
+.testimonial-card .author h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.testimonial-card .author span {
+    font-size: 12px;
+  color: #aaa;
+}
+
+/* Rectangle indicators */
+
+
+.rectangle-indicators-review {
+  position: absolute;
+ bottom: 45px;
+  width: 40px;   /* ek rectangle ka size */
+  height: 8px;
+  background: red;  /* Active rectangle */
+  border-radius: 4px;  /* Rounded corners */
+  box-shadow: 
+    50px 0 0 #f9f5f5,   /* 2nd rectangle */
+    100px 0 0 #ebe7e7,  /* 3rd rectangle */
+    150px 0 0 #fbf9f9;  /* 4th rectangle */
+}
+
+
+
+
+
+
+
+
+
+
+.footer {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 40px 10%;
+  background: #111;
+  color: white;
+}
+.footer-col img{
+  padding: 10px;
+}
+
+.footer h3 {
+  margin-bottom: 10px;
+  
+}
+
+
+.footer a {
+  list-style: none;
+  text-decoration: none;
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.socials a {
+  margin-right: 10px;
+}
+.footer ul {
+  list-style: none;   /* remove bullets */
+  padding: 0;         /* remove default left padding */
+  margin: 0;          /* remove default margin */
+}
+
+.footer li {
+  margin-bottom: 8px; /* spacing between links */
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background: white;
+  transition: 0.3s;
+}
+
+.social-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: black;   /* always solid black */
+}
+
+.social-icon:hover {
+  background: black;
+}
+
+.social-icon:hover svg {
+  fill: white;
+}
+.footer-bottom {
+  grid-column: 1 / -1;   /* take full width under all cols */
+  border-top: 1px solid #444;
+  text-align: center;
+  padding: 15px 0 0;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+
+
+/* ================= Desktop (1025px and above) ================= */
+@media (min-width: 1025px) {
+  .tech {
+    justify-content: flex-start;
+    padding-left: 50px;
+  }
+
+  .tech-partners {
+    justify-content: space-around;
+    gap: 20px;
+  }
+}
+
+/* ================= Tablet (768px – 1024px) ================= */
+@media (max-width: 1024px) {
+  .tech {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+    border-bottom: none; /* नीचे line extra ना दिखे */
+  }
+
+  #tech-span {
+    font-size: 26px;
+    padding-left: 0;
+  }
+
+  .tech p {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+  .tech-partners {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .tech-partners img {
+    width: 130px;
+    height: 45px;
+  }
+}
+
+/* ================= Mobile (up to 767px) ================= */
+@media (max-width: 767px) {
+  .tech {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  #tech-span {
+    font-size: 22px;
+    padding-left: 0;
+    display: block;
+  }
+
+  .tech p {
+    font-size: 18px;
+    margin: 5px 0 15px 0;
+  }
+
+  .tech-partners {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .tech-partners img {
+    width: 110px;
+    height: 40px;
+  }
+
+  .fa-angle-left,
+  .fa-angle-right {
+    margin: 10px;
+    height: 25px;
+    width: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
