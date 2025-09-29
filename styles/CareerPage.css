@@ -1,0 +1,309 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+  background: #fff;
+  border-bottom: 1px solid #e2e2e2;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px 4vw;
+}
+
+.logo img {
+  height: 34px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+  padding-left: 5%;
+  padding-right: 40%;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.btn-contact {
+  background: #e53935;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.hero {
+  position: relative;
+  min-width: 100%;
+  min-height: 100%; /* Full screen height */
+  background: url("/Assests/AboutUAass/hero.png") no-repeat center center/cover; /* background image */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+  opacity: 1;
+
+}
+/* Dark Overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)); 
+  /* background: rgba(0, 0, 0, 0.75);  */
+  z-index: 1;
+}
+
+/* Content Wrapper */
+.hero-content {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+ 
+  text-align: center;
+}
+
+/* Heading */
+.hero-content h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f7f4f4;
+  
+}
+
+/* Paragraphs */
+.hero-content p {
+  font-size: 18px;
+ text-align: center;
+ /* min-width: 700px; */
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #f5f5f5;
+  min-width: 1200px;
+}
+
+  .hiring-section {
+      background: #111;
+      color: #fff;
+      margin-top: 40px;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hiring-section h2 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .hiring-section p {
+      font-size: 16px;
+      margin-bottom: 40px;
+      color: #ccc;
+    }
+
+    .job-cards {
+      display: flex;
+      gap: 20px;
+      justify-content: space-around;
+      align-items: center;
+      justify-items: center;
+      padding: 10px 10px 0px 1px;
+    }
+
+    .job-card {
+      background: #111;
+      border: 1px solid #666;
+      display: flex;
+      flex-direction: row;
+      justify-items: center;
+      align-items: center;
+      text-align: center;
+      transition: 0.3s;
+      cursor: pointer;
+      padding: 5px 60px  5px 0px 
+    }
+
+    .job-card:hover {
+      border-color: #ff4b2b;
+      transform: translateY(-5px);
+    }
+
+    .job-card img {
+      width: 60px;
+      padding-top: 15px;
+    }
+
+    .job-card h3 {
+      font-size: 16px;
+      color: #fff;
+      margin: 0;
+     width: 100px ;
+    }
+
+    .form-section{
+        display: flex;
+        gap:40px;
+        margin:40px;
+        border:1px solid black;
+        border-top-left-radius: 14px;
+        border-bottom-left-radius: 14px;
+    
+        
+    }
+    .form-image{
+        
+        background-size: cover;
+        width: 129;
+        height: 440;
+        top: 775px;
+        left: 70px;
+        opacity: 1;
+        
+        
+    }
+    .form-container {
+        flex: 1.2;
+      padding: 40px 40px 0 40px;
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    form input, 
+    form select, 
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    form textarea {
+      grid-column: span 2;
+      min-height: 100px;
+      resize: none;
+    }
+
+    .form-button {
+      grid-column: span 2;
+      text-align: left;
+    }
+
+    .form-button button {
+      padding: 12px 20px;
+      border: none;
+      background: #111;
+      color: #fff;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .form-button button:hover {
+      background: #ff4b2b;
+    }
+    .footer {
+  background: #181818;
+  color: #ddd;
+  padding: 48px 5vw 8px 5vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 38px;
+  align-items: flex-start;
+}
+
+.footer-col {
+  margin-bottom: 16px;
+}
+.footer-logo {
+  height:34px;
+  margin-bottom:12px;
+}
+.footer-col h3 {
+  color:#fff;
+  margin-bottom:8px;
+  font-size:1.08em;
+}
+.footer-col ul {
+list-style:none;
+  padding:0;
+}
+.footer-col ul li {
+  margin-bottom:7px;
+}
+.footer-col a {
+  color:#ccc;
+  text-decoration:none;
+}
+.footer-col a:hover {
+  color:#e53935;
+}
+.socials .social-icon {
+  background:#fff;
+  color:#222;
+  border-radius:4px;
+  padding:3px 10px;
+  margin-right:7px;
+  font-weight:600;
+  display: inline-block;
+}
+.footer-bottom {
+  grid-column: 1 / -1;
+  border-top: 1px solid #444;
+  color: #aaa;
+  text-align: center;
+  font-size:0.97em;
+  padding-top: 17px;
+  margin-top: 11px;
+}
+
+

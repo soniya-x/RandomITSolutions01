@@ -1,0 +1,386 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+  background: #fff;
+  border-bottom: 1px solid #e2e2e2;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px 4vw;
+}
+
+.logo img {
+  height: 34px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+  padding-left: 5%;
+  padding-right: 40%;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.btn-contact {
+  background: #e53935;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.hero {
+  position: relative;
+  min-width: 100%;
+  min-height: 100%; /* Full screen height */
+  background: url("/Assests/AboutUAass/hero.png") no-repeat center center/cover; /* background image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+  opacity: 1;
+
+}
+/* Dark Overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)); 
+  /* background: rgba(0, 0, 0, 0.75);  */
+  z-index: 1;
+}
+
+/* Content Wrapper */
+.hero-content {
+  padding: 30px;
+  display: flex;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Heading */
+.hero-content h1 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f7f4f4;
+  
+}
+
+/* Paragraphs */
+.hero-content p {
+  font-size: 24px;
+ 
+
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #f5f5f5;
+ 
+}
+
+
+
+.rep-heading h3 {
+  color: #e53935;
+  font-size: 28px;
+}
+
+.rep-heading h2 {
+  font-size: 30px;
+  position: relative;
+}
+.rep-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 170px;
+  bottom: 3px;
+  min-width:90%;
+  height: 3px;
+  background:#281571;
+}
+
+.repair-section {
+  margin: 30px 0;
+  padding: 30px;
+  width: 100%;
+}
+
+/* ✅ GRID LAYOUT */
+.conatainer {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* responsive grid */
+  gap: 30px;
+}
+
+/* Card */
+.rep-container {
+  border: 1px solid rgb(176, 166, 166);
+  padding:  10px 10px 10px 10px;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.rep-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.rep-container-content {
+  background: #0f0f0f;
+  color: #e2e2e2;
+  padding: 15px;
+}
+
+.rep-container-content h3 {
+  margin-bottom: 10px;
+  position: relative;
+}
+.rep-container-content h3::after {
+  content: "";
+  position: absolute;
+  left: 187px;
+  bottom: 3px;
+  width: 70px;
+  height: 3px;
+  background: crimson;
+}
+
+
+.rep-container-content p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.view-btn {
+  margin-top: 40px;
+  padding: 12px 75px 12px 7px;
+  border: 1px solid black;
+  background: white;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-btn:hover {
+  background: black;
+  color: white;
+}
+
+
+
+.footer {
+  margin-top: 60px;
+  padding:60px 40px 60px 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+
+  background: #111;
+  color: white;
+}
+.footer-col img{
+  padding: 10px;
+  width: 30%;
+  height: auto;
+}
+
+.footer h3 {
+  margin-bottom: 10px;
+  
+}
+
+
+.footer a {
+  list-style: none;
+  text-decoration: none;
+  color: #ddd;
+  font-size: 0.9rem;
+}
+
+.socials a {
+  margin-right: 10px;
+}
+.footer ul {
+  list-style: none;   /* remove bullets */
+  padding: 0;         /* remove default left padding */
+  margin: 0;          /* remove default margin */
+}
+
+.footer li {
+  margin-bottom: 8px; /* spacing between links */
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 20px;
+}
+.footer p{
+  padding: 7px;
+}
+
+.social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background: white;
+  transition: 0.3s;
+}
+
+.social-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: black;   /* always solid black */
+}
+
+.social-icon:hover {
+  background: black;
+}
+
+.social-icon:hover svg {
+  fill: white;
+}
+.footer-bottom {
+  grid-column: 1 / -1;   /* take full width under all cols */
+  border-top: 1px solid #444;
+  text-align: center;
+  padding: 15px 0 0;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+
+/* ===================== */
+/* 📱 Responsive Queries */
+/* ===================== */
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  /* Repair Section */
+  .conatainer {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+
+  /* Footer */
+  .footer {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
+    padding: 30px 5%;
+  }
+
+  .nav-links {
+    gap: 15px;
+    padding-right: 10%;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    min-width: auto; /* allow shrinking */
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px 0;
+    position: relative;
+  }
+
+  .btn-contact {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  /* Hero Section */
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Repair Section */
+  .conatainer {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+
+  /* Footer */
+  .footer {
+    grid-template-columns: 1fr; /* stacked */
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 22px;
+  }
+
+  .hero-content p {
+    font-size: 13px;
+  }
+
+  .view-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
